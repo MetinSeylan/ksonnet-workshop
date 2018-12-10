@@ -1,0 +1,38 @@
+apiVersion: 0.3.0
+environments:
+  default:
+    destination:
+      namespace: default
+      server: https://35.246.225.13
+    k8sVersion: v1.9.7
+    path: default
+  production:
+    destination:
+      namespace: production
+      server: https://35.246.225.13
+    k8sVersion: v1.9.7
+    path: production
+    targets:
+    - order-service
+    - test-service
+    - deneme
+  staging:
+    destination:
+      namespace: staging
+      server: https://35.246.225.13
+    k8sVersion: v1.9.7
+    path: staging
+kind: ksonnet.io/app
+libraries:
+  metin/nginx:
+    name: nginx
+    registry: metin
+    version: ""
+name: hello-app
+registries:
+  incubator:
+    protocol: github
+    uri: github.com/ksonnet/parts/tree/master/incubator
+  metin:
+    protocol: fs
+    uri: ../04-PACKAGE/metin/registry/

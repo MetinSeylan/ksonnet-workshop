@@ -1,0 +1,22 @@
+{
+  "name": "nginx",
+  "apiVersion": "0.0.1",
+  "kind": "ksonnet.io/parts",
+  "description": "nginx",
+  "author": "nginx",
+  "contributors": [],
+  "keywords": [
+    "nginx"
+  ],
+  "quickStart": {
+    "prototype": "io.ksonnet.pkg.nginx",
+    "componentName": "nginx",
+    "flags": {
+      "name": "nginx",
+      "namespace": "default"
+    },
+    "comment": "nginx"
+  },
+  "license": "Apache 2.0"
+}
+
